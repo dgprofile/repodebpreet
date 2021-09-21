@@ -18,11 +18,11 @@ pipelines:
         - step:
             name: Deploy 
             script:
-              - deploy --only hosting
-              - npm run build
+              - pipe: atlassian/firebase-deploy:1.2.0
+                variables:
+                  FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
             artifacts:
               - dist/**
-            deployment: 
-              - FIREBASE_TOKEN: 
-                ${{ secrets.FIREBASE_TOKEN }}
+              
+             
         
