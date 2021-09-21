@@ -18,8 +18,8 @@ header, main, footer{
 .main-text{
     width: 80%;
     height: 79vh;
-    background-color: olivedrab;
-    color: cornsilk;
+    background-color: burlywood;
+    color: brown;
     font-size: 1.7rem;
 
     display: flex;
