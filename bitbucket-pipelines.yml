@@ -9,16 +9,20 @@ pipelines:
   default:
     - parallel:
         - step:
-            name: Build and Test
-            caches:
-              - node
+            name: Build and Test  
             script:
-              - npm install
-              - npm test
+              - npm ci
+              - npm run build
+            artifacts:
+              - dist/**
         - step:
-            name: Code linting
+            name: Deploy 
             script:
-              - npm install eslint
-              - npx eslint .
-            caches:
-              - node
+              - deploy --only hosting
+              - npm run build
+            artifacts:
+              - dist/**
+            deployment: 
+              - FIREBASE_TOKEN: 
+                ${{ secrets.FIREBASE_TOKEN }}
+        
