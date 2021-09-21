@@ -3,22 +3,23 @@
 #  This template allows you to validate your NodeJS code.
 #  The workflow allows running tests and code linting on the default branch.
 
-image: node:10.15.3
+image: node:14.15
 
 pipelines:
   default:
     - parallel:
         - step:
-            name: Build and Test
-            caches:
-              - node
+            name: Build and Test  
             script:
-              - npm install
-              - npm test
+              - npm ci
+              - npm run build
+            artifacts:
+              - .digital/dist/**
         - step:
-            name: Code linting
+            name: Deploy 
+            deployment: test
             script:
-              - npm install eslint
-              - npx eslint .
-            caches:
-              - node
+              - pipe: atlassian/firebase-deploy:1.2.0
+                variables:
+                  FIREBASE_TOKEN: "1//0dsN9YYPq8NHuCgYIARAAGA0SNwF-L9Ir82cTCOOSQ4mcd8KMwfjzE033gMkjHyqq522x1ytLZPBsvFK48Ar4A6nixHCyr_mP8vU"
+                  PROJECT_ID: "debpreet-c247b"
