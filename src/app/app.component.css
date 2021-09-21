@@ -6,7 +6,7 @@ header, main, footer{
 .head-text{
     width: 80%;
     background-color: coral;
-    color: cornsilk;
+    color: coral;
     font-size: 1.7rem;
 
     display: flex;
@@ -19,7 +19,7 @@ header, main, footer{
     width: 80%;
     height: 79vh;
     background-color: burlywood;
-    color: brown;
+    color: darkblue;
     font-size: 1.7rem;
 
     display: flex;
