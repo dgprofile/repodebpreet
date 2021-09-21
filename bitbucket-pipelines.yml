@@ -14,7 +14,7 @@ pipelines:
               - npm ci
               - npm run build
             artifacts:
-              - dist/**
+              - build/**
         - step:
             name: Deploy 
             deployment: test
