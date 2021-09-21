@@ -22,7 +22,7 @@ pipelines:
               - pipe: atlassian/firebase-deploy:1.2.0
                 variables:
                   FIREBASE_TOKEN: "1//0dsN9YYPq8NHuCgYIARAAGA0SNwF-L9Ir82cTCOOSQ4mcd8KMwfjzE033gMkjHyqq522x1ytLZPBsvFK48Ar4A6nixHCyr_mP8vU"
-                  PROJECT_ID: "debpreet-c247b"
+                  PROJECT_ID: "debpreet"
 
               
               
