@@ -18,6 +18,8 @@ jobs:
         run: npm ci
       - name: Build dependencies
         run: npm run build
+      - name: Build Firebase dependencies
+        run: npm install firebase
       - name: Archive production artifact
         uses: actions/upload-artifact@main
         with:
