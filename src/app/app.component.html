@@ -4,12 +4,22 @@
   </div>
 </header>
 <main>
+  <section class="img-transition">
+    <div #random id="random" ></div>  
+  </section>
   <div class="main-text">
     Digital body within Main
+    <p class="thing" #animeObject>something</p>
     <div class="feature-body">
       This is feature body
+      <ul>
+        <li *ngFor='let course of allcourses'>
+            {{ course }}
+        </li>
+      </ul>
     </div>
   </div>
+  
 </main>
 <footer>
   <div class="footer-text">
