@@ -41,7 +41,6 @@ main{
     box-shadow: lightgreen 0 8 16 0;
     
     /* ENHANCEMENT */
-    background-image: url('../images/pexels-andrea-piacquadio-853151.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;  
@@ -49,6 +48,9 @@ main{
     animation: slide 20s infinite ease-in;
   }
   @keyframes slide{
+      0%{
+        background-image: url('../images/pexels-andrea-piacquadio-853151.jpg');
+      }
       20%{
         background-image: url('../images/pexels-andrea-piacquadio-920382.jpg')
       }
