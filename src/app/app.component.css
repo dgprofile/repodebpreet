@@ -45,7 +45,7 @@ main{
     background-size: cover;
     background-repeat: no-repeat;  
 
-    animation: slide 20s infinite ease-in;
+    animation: slide 10s infinite;
   }
   @keyframes slide{
       0%{
